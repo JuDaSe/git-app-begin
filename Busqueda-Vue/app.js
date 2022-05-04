@@ -1,8 +1,9 @@
 const busqueda = new Vue({
     el: '#busqueda',
     data: {
+    mensaje: ' ',
     id: undefined,
-    mensaje: // Colocar mensaje
+    filtro: [],
     personas: [
       { id: 1, name: "Juan", surname:"Segundo" },
       { id: 2, name: "Michael", surname:"Perez" },
@@ -12,13 +13,23 @@ const busqueda = new Vue({
   methods:{
     obtenerPorId: function (id){
         let find = undefined
+        let filterName = undefined
+        let filterSurname = undefined
         this.personas.map( usuario => {
             if(usuario.id == parseInt(this.id)){
                 find = usuario
+
+                filterName = find.name
+                filterSurname = find.surname
+                this.mensaje = `Nombre completo: ${filterName} ${filterSurname}`  
+                console.log(`Nombre completo: ${filterName} ${filterSurname}`  )      
             }
+            else
+            { this.mensaje = 'No se encontro el ID: ' + this.id }
         })
-        return find ? console.log(find) : console.log("no se encontro")
       }
   }
 });
+
+
     

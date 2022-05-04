@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+                const input = [1,"B","C",true, true, 1];
+
+                const burbuja = function(arr){
+                    for(let i = 0; i < arr.length; i++)
+                        {
+                            for(let j = 0; j < arr.length; j++)
+                                {
+                                    if(arr[j] > arr[j+1])
+                                    {
+                                        let tmp = arr[j];
+                                        arr[j] = arr[j+1]
+                                        arr[j+1] = tmp;
+                                    }
+                                }
+                        }
+                        return arr
+                }
+
+                let output1 = [];
+                let output2 = [];
+                let output3 = []
+                let outputfinish = []
+
+                for(let i = 0; i < input.length; i++)
+                {
+                    if(typeof input[i] === "number")
+                    {
+                        output1.push(input[i])
+                    }
+                    else if(typeof input[i] === "boolean")
+                    {
+                        output2.push(input[i])
+                    }
+                    else if(typeof input[i] === "string")
+                    {
+                        output3.push(input[i])
+                    }
+                }
+
+                output1 = burbuja(output1)
+                output2 = burbuja(output2)
+                output3 = burbuja(output3)
+                outputfinish = output1 + output2 + output3
+
+                            console.log(outputfinish)
+        </script>
+</body>
+</html>

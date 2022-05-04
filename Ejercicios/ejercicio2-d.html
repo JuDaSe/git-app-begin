@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <<script type="text/javascript">
+
+      const input = [1,true,"B","C"];
+      let w = ["string","number"];
+      let z = [];
+      for(let i = 0; i < input.length; i++)
+      {
+          if(typeof input[i] === w[1])
+          {
+            z.push(input[i])
+          }
+          if(typeof input[i] === w[0])
+          {
+            z.push(input[i])
+          }
+      }
+      console.log(z)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const input = [1, "B", "C", true, true, 1]
+        let output = []
+            for(let i = 0; i < input.length; i++)
+            {
+                let count=0;
+                if(typeof input[i] === 'boolean')
+                {
+                    for(let j = 0; j < input.length; j++)
+                    {
+                        if(input[i] === input[j])
+                        {
+                            count++
+                        }
+                    }
+                    if(count > 1)
+                    {
+                         output.push(input[i])
+                    }
+                }
+                
+            }
+
+
+
+            console.log(output)
+    </script>
+</body>
+</html>

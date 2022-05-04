@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+        const input = [1,"2","0","1b","1"] // output [1,”1b”,”1”]
+        let output = []
+        let add = [1,"1b","1"]
+
+        for(let i = 0; i < input.length; i++)
+        {
+          for(let a = 0; a < add.length; a++)
+          {
+            if(input[i] === add[a])
+            {
+              output.push(input[i])
+            }
+          }
+        }
+        console.log(output)
+
+
+    </script>
+
+  </body>
+</html>

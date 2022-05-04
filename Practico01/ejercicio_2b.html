@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const input = [1,true,false,true,"C"] // Output: w: [1], z: [true,false,true], x: [null]
+        let w = [];
+        let z = [];
+        let x = [];
+
+        for(let i in input)
+        {
+            if(typeof input[i] === 'number') // busca el tipo numero en el array
+            {
+                w.push(input[i])
+            } 
+            else if(typeof input[i] === 'boolean') // busca el tipo booleano en el array
+            {
+                z.push(input[i])
+            }
+            else
+            {
+                if(typeof input[i] === "string")
+                {
+                    x.push(('null'))  // Cada vez que encuentre una cadena de texto, sin importar la cantidad de caracteres, este lo convierte en 'null'                   
+                }
+            }
+        }
+        console.log(w,z,x)
+
+
+    </script>
+</body>
+</html>

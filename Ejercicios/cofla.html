@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // let free = false;
+      // const ValidarCliente = (time)=>
+      // {
+      //    let edad = prompt("¿Cuál es tu edad?");
+      //    if(edad >= 18){
+      //      if(time >= 2 && time <= 7 && !free){
+      //        alert("Podes pasar gratis")
+      //        let free = true;
+      //      } else {
+      //        alert("No podes pasar")
+      //      }
+      //    } else {
+      //      alert("No podes pasar sos menor")
+      //    }
+      //  }
+      // let hora = prompt("Elegi una hora");
+      //
+      // ValidarCliente(parseInt(hora))
+      let alumnos = prompt("Cantidad de alumnos");
+
+      alumnosTotales = [];
+
+      for(let i = 0; i < alumnos; i++){
+        let asistencia = Math.floor(Math.random() * 30)
+        alumnosTotales[i] = [prompt("Nombre del alumno " + (i+1)),asistencia];
+      }
+
+        for(alumno in alumnosTotales){
+          let resultado = `${alumnosTotales[alumno][0]} <br>
+          ______________ Presentes: ${alumnosTotales[alumno][1]}
+          ______________ Ausentes: ${30 - alumnosTotales[alumno][1]}
+          `;
+          if(30 - alumnosTotales[alumno][1] >= 18){
+           resultado+= " <b> </b>Reprobado por insasistencias </b> <br><br>"
+         } else {
+           resultado+="<br><br>"
+        }
+
+          document.write(resultado)
+        }
+
+      // const alumnos = (presentes, ausentes, total)=>{
+      // let Presentes =  prompt("Muestra la cantidad de alumnos presentes en el aula");;
+      // let Ausentes = prompt("Muestra la cantidad de alumnos ausentes");
+      //
+      //  total = parseInt(Presentes) + parseInt(Ausentes);
+      // alert("Total alumnos suscritos " + total)
+      // final
+      // }
+      //
+      // alumnos()
+    </script>
+  </body>
+</html>

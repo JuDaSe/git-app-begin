@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      // Output: w: [1], z: [true,false,true], x: [null]
+
+      const input = [1,true,false,true,"C"]
+
+      w = []
+      z = []
+      x = []
+
+      for(let i = 0; i < input.length; i++)
+      {
+        if(typeof input[i] === "number")
+        {
+          w.push(input[i])
+        }
+        if(typeof input[i] === "boolean")
+        {
+          z.push(input[i])
+        }
+        if(typeof input[i] === "string")
+        {
+          if(input[i] == "C")
+          {
+            x.push("null")
+          } else {
+            x.push(input[i])
+          }
+        }
+
+      }
+      console.log(w,z,x)
+    </script>
+
+  </body>
+</html>

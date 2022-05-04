@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const input = [1, 2, 3, "A", "A", "B", 2, 2]
+        let output = []
+
+
+        for(let i in input)
+        {
+        
+            let conteo=0;
+            
+            for(let j in input)
+            {
+                if(input[i] === input[j])
+                {
+                    conteo++
+                }
+            }
+            if(conteo > 1 && !output.includes(input[i]))
+            {
+                    output.push(input[i])
+            }
+        }
+        console.log(output)
+
+    </script>
+</body>
+</html>

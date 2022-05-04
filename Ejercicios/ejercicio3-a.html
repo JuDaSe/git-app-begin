@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+        const input = ["Aba","AAb","b","B"]
+        let output = []
+        let flg = ["Aba", "AAb"]
+        for(let i = 0; i < input.length; i++)
+          {
+            for(let j = 0; j < flg.length; j++)
+            if(input[i] === flg[j])
+            {
+              output.push(input[i])
+            }
+
+          }
+          console.log(output)
+        // for(let i = 0; i < input.length; i++)
+        // {
+        //   let str
+        //   if(input[i].length === 3)
+        //   {
+        //     output.push(input[i])
+        //   }
+        // }
+        // console.log(output)
+
+
+
+
+
+    </script>
+  </body>
+</html>

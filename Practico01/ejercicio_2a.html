@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            const input = [1,2,"B","C","B"]; // Output: w: [1,2], z: [“B”,”B”,”C”]
+            let output = [];
+            let w = [];
+            let z = [];
+            let conteo = 0;
+                for(let i = 0; i < input.length; i++)
+                {
+                    if(typeof input[i] === 'number')
+                    {
+                        w.push(input[i])
+                    }
+                    else if(typeof input[i] === 'string')
+                    {
+                        for(let j = 0; j < input.length; j++)
+                        {
+                            if(input[i] === input[j])
+                            {
+                                conteo++    
+                            }
+                        }
+                    }
+                    if(conteo > 2)
+                    {
+                        z.push(input[i]) // Compactar [“B”,”C”] 
+                    }
+                }
+
+                console.log(w,z)
+
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //     for(let i = 0; i < input.length; i++)
+        //     {
+        //         for(let j = 0; j < input.lenght; j++)
+        //         {
+        //             if(input[j] > input[j + 1])
+        //             {
+        //                 let tmp = input[j];
+        //                 input[j] = input[j + 1];
+        //                 input[j + 1] = tmp;
+
+        //                 output.push(tmp)
+        //             }
+        //         }
+        //     }
+        //     console.log(output)
+        burb = function(arr)
+        {
+            for(let i = 0; i < arr.length; i++)
+            {
+                for(let j = 0; j < arr.length; j++)
+                {
+                    if(arr[j] > arr[j + 1])
+                    {
+                        let tmp = arr[j]
+                        arr[j] = arr[j +1]
+                        arr[j + 1] = tmp
+                    }
+                }
+                return arr
+            }
+        }
+
+        const input = [1, 2, 3,"A","A","B", 2, 2]// Salida [1,2,2,2,3,"A","A","B"]
+        let out1 = []
+        let out2 = []
+        let output  = []    
+
+        for(let i = 0; i < input.length; i++)
+        {
+            if(typeof input[i] === 'number')
+            {
+                out1.push(input[i])
+            }    
+            else
+            {
+                out2.push(input[i])
+            }        
+        }
+        out1 = burb(out1)
+        out2 = burb(out2)
+
+        output = out1.concat(out2)
+
+        console.log(output)
+    </script>
+</body>
+</html>

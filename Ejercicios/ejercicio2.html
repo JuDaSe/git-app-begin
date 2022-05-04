@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const input = [1, 2, 3, "A", "A", "B", 2, 2]
+      let output = []
+      let numeros = []
+      let letras = []
+      for(let i = 0; i < input.length; i++)
+      {
+        if(typeof input[i] === "number")
+        {
+            numeros.push(input[i])
+        }
+        else if(typeof input[i] === "string")
+        {
+          letras.push(input[i])
+        }
+      }
+      let arregloL = letras.sort()
+      let arregloN = numeros.sort((a, b) => a - b);
+
+      console.log(arregloL,arregloN)
+
+      let compactar = arregloN.concat(arregloL)
+
+      console.log(compactar)
+
+    </script>
+  </body>
+</html>
